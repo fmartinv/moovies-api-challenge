@@ -1,0 +1,75 @@
+.moovieImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.containerMoovieCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 1200px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.moovie-card img {
+  view-timeline: --moovieImg;
+  view-timeline-axis: horizontal;
+  animation-timeline: --moovieImg;
+  animation-name: show;
+  animation-range: entry 25% cover 60%;
+  animation-fill-mode: both;
+}
+.moovie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  height: auto;
+}
+
+.imageWrapper {
+  position: relative;
+  max-width: 88%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+.pargraphOverview {
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: start;
+  text-wrap: pretty;
+}
+
+.articleOverview {
+  width: 80%;
+  padding-top: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .containerMoovieCard {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .articleOverview {
+    padding-top: 1em;
+    padding-left: 3rem;
+  }
+}
