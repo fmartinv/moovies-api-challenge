@@ -94,3 +94,9 @@ export const SvgContainer = styled.div`
   z-index: 100;
   width: 2rem;
 `
+export const GalleryContainer = styled.div`
+  > div {
+    width: 50%;
+    margin: auto;
+  }
+`
