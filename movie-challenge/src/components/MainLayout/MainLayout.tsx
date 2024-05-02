@@ -1,8 +1,6 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Container, Content, ScrollContainer } from './styles'
-interface LayoutProps {
-  children: ReactNode
-}
+import { LayoutProps } from './mainlayout.types'
 
 const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (

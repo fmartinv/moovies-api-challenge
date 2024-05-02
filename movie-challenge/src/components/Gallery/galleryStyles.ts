@@ -2,20 +2,14 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100dvh;
-`
-export const ImgWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 `
 
 export const ImgItem = styled.img`
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
+  aspect-ratio: 2/3;
 `
 export const Title = styled.h5`
   color: blueviolet;

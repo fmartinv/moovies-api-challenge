@@ -1,25 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 
-import { Container, ImgItem, ImgWrapper, Title } from './galleryStyles'
+import { Container, ImgItem, Title } from './galleryStyles'
 import 'swiper/css/bundle'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
-
-type imageObject = {
-  original: string
-  title?: string
-  popularity: number
-  name?: string
-  id?: number
-}
-
-interface GalleryProps {
-  data: imageObject[]
-  dataType: string
-}
+import { GalleryProps } from './gallery.types'
 
 export const Gallery: React.FC<GalleryProps> = ({ data, dataType }) => {
   return (
@@ -33,8 +21,6 @@ export const Gallery: React.FC<GalleryProps> = ({ data, dataType }) => {
         slidesPerView={2}
         navigation
         scrollbar={{ draggable: true }}
-        // onSwiper={swiper => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
         className='mySwiper'
         breakpoints={{
           640: {
@@ -54,9 +40,7 @@ export const Gallery: React.FC<GalleryProps> = ({ data, dataType }) => {
         {data?.map((data, index) => (
           <SwiperSlide key={index}>
             <Link to={`/${dataType}/${data.id}`}>
-              <ImgWrapper>
-                <ImgItem src={data.original} alt={data.title} />
-              </ImgWrapper>
+              <ImgItem src={data.original} alt={data.title} />
               <Title>{data.title}</Title>
             </Link>
           </SwiperSlide>

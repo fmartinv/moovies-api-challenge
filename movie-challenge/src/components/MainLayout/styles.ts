@@ -19,6 +19,7 @@ export const ScrollContainer = styled.div`
   overflow-y: scroll;
   display: flex;
   place-content: center;
+
   @media screen and (max-width: 768px) {
     scroll-behavior: smooth;
     scrollbar-width: none;
