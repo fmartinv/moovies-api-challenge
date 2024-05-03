@@ -18,4 +18,4 @@ Swiper Gallery Library to show movie and Tv shows
 Using styled components and CSS to style the web
 
 [moovie-app](https://moovies-api-challenge.vercel.app/)
-[Screenshot-2024-05-03-at-2-16-09-PM.png](https://postimg.cc/Z9kvYwCX)
+[![SITE](https://i.postimg.cc/KYjPNVFc/Screenshot-2024-05-03-at-2-16-09-PM.png)](https://postimg.cc/Z9kvYwCX)
