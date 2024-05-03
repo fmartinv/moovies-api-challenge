@@ -16,7 +16,6 @@ const useMovieDetailLogic = () => {
   //Main data fetch
   const detailUrl = `${CONSTANTS.DETAIL_URL}/${type}/${id}${CONSTANTS.QUERY_MOVIE_DETAIL}`
   const { data, error, loading } = useDataFetch<MovieDetail>(detailUrl)
-  console.log(data, error, loading)
 
   useEffect(() => {
     if (data) setDataDetail(data)
@@ -44,7 +43,6 @@ const useMovieDetailLogic = () => {
   //Images for gallery
   const imageSource: imageObject[] = []
   movieRecomended?.results?.map(movie => {
-    console.log(movie)
     imageSource.push({
       original: CONSTANTS.IMG_URL + movie.poster_path || movie.backdrop_path,
       title: movie.title,
