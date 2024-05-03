@@ -95,8 +95,16 @@ export const SvgContainer = styled.div`
   width: 2rem;
 `
 export const GalleryContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+
   > div {
     width: 50%;
-    margin: auto;
+    margin-right: 400px;
+    @media (max-width: 768px) {
+      margin: auto;
+      width: 73%;
+    }
   }
 `

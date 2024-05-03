@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './movieItem.styles'
-import { MovieDetail } from '../../views/MoovieDetails/types'
+import { MovieDetail } from '../../views/MovieDetail/types'
 import { CONSTANTS } from '../../constants/constants'
 
 interface Genre {

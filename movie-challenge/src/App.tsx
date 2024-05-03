@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import MoovieDetail from './views/MoovieDetails/MoovieDetail'
-import useLogic from './useLogic'
+import MoovieDetail from './views/MovieDetail/MovieDetail'
+import useAppLogic from './useAppLogic'
 import Home from './views/Home/Home'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     loading: movieLoading,
     imageSource,
     imageTvSource
-  } = useLogic()
+  } = useAppLogic()
 
   if (movieLoading) return <div>Loading...</div>
   if (movieError) return <div>Error:PAGE EMPTY</div>

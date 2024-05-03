@@ -1,19 +1,19 @@
 import { CONSTANTS } from './constants/constants'
-import { Movie } from './components/MoovieCard/types'
 import useDataFetch from './hooks/useDataFetch'
+import { MovieDetail } from './views/MovieDetail/types'
 
 interface MovieData {
-  results: Movie[]
+  results: MovieDetail[]
 }
 type imageObject = {
-  original: string
+  original: string | undefined
   title?: string
   popularity: number
   name?: string
   id?: number
 }
 
-const useLogic = () => {
+const useAppLogic = () => {
   const { data, error, loading } = useDataFetch<MovieData>(
     `${CONSTANTS.API_URL}${CONSTANTS.QUERY_MOVIE_POPULAR}`
   )
@@ -56,4 +56,4 @@ const useLogic = () => {
   }
 }
 
-export default useLogic
+export default useAppLogic
